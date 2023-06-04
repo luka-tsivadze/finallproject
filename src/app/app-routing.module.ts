@@ -22,6 +22,7 @@ const routes: Routes = [
 
   {path:'tour', component:ToursComponent },
   {path:'destinations',  component:DestinationComponent },
+  {path:'home/destinations',  component:DestinationComponent },
   {path:'activities',  component:ActivitiesComponent },
   {path:'destinations/:id', component:DetailsComponent },
 
