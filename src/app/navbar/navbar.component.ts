@@ -25,7 +25,7 @@ if(localStorage.getItem('isregistred')){
   if(this.user.link==null){
     this.user.link='https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
   }
-  console.log(this.isregistrated)
+
 }
 
 }

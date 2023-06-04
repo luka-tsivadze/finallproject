@@ -33,7 +33,7 @@
         <option value="none">none</option>
       </select>
     </div>
-    <h3 *ngIf="text"> </h3>
+    <h5 *ngIf="text" class="warning">{{text}} </h5>
     <button type="submit" class="btn btn-primary" *ngIf="ractiveform.status=='VALID' "   >Submit</button>
   </form>
   </div>
