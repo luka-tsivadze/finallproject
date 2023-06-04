@@ -1,0 +1,38 @@
+<nav>
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="icon bi bi-three-dots-vertical" viewBox="0 0 26 26">
+        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+      </svg>
+    <span  routerLink="home">2rism <img src="../../assets/icons/Vector2rismnav.png" alt=""></span>
+
+<ul>
+    
+<li routerLink="home" routerLinkActive="white">
+    home
+</li>
+
+
+<li  routerLink="tour" routerLinkActive="white">
+    tours
+</li>
+
+<li  routerLink="destinations" routerLinkActive="white">
+    destinations
+</li>
+
+<li  routerLink="activities" routerLinkActive="white">
+    activities
+</li>
+
+<li   routerLink="contacts" routerLinkActive="white" class="orange" >
+    <a  href="#contact">
+    contact
+    </a>
+</li>
+
+</ul>
+
+<div (click)="logout()" class="regitredbox" *ngIf="isregistrated" ><div class="boxtext"><p class="name">{{user.name}}</p> <p>{{user.surname}}</p></div>
+<img src="{{user.link}}" alt="">
+ </div>
+<div class="registration" *ngIf="isregistrated==false"><button class="firstbtn" routerLink="log-in">log in</button>  <button class="secondbtn" routerLink="sign-up">sign up</button> </div>
+</nav>

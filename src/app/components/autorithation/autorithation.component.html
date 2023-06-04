@@ -1,0 +1,23 @@
+<div class="body">
+    <form  [formGroup]='ractiveform' (submit)="submit()">
+        <div class="row">
+          <h3>Registration form</h3>
+        </div>
+    
+        <div class="row">
+          <label for="em">ელ:ფოსტა</label>
+          <input type="email" class="text" id="em" name="email" formControlName="email">
+          <h5 *ngIf="email==true" class="ps">email is incorrect</h5>
+        </div>
+        <div class="row">
+          
+          <label for="ps"> პაროლი</label>
+          <input type="password" class="password" required id="ps" name="password" formControlName="password">
+          <h5 *ngIf="password==true" class="ps">passwor is incorrect</h5>
+        </div>
+     
+       
+      
+        <button type="submit" class="btn btn-primary" *ngIf="ractiveform.status=='VALID' " [routerLink]="link">Submit</button>
+      </form>
+      </div>

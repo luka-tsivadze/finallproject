@@ -1,0 +1,25 @@
+
+<div class="body" >
+  <h4> Activities </h4>
+<div class="cardparent" >
+<div class="card" *ngFor="let info of activity"(click)="click(info.id)">
+    <img src="{{info.imglink}}" alt="">
+    <h5>{{info.name}}</h5>
+  </div>
+
+
+
+ </div>
+</div>
+<div class="cover" *ngIf="id"(click)="dissapear()" ></div>
+
+<div class="popwindow" [@fadeInOut]  *ngIf="id"(click)="dissapear()">
+  <h3>{{id.header}}</h3>
+  <span>
+{{id.text}}
+<div class="li">
+    <li *ngFor="let li of id.placelist">{{li}}</li>
+</div>
+  </span>
+
+</div>

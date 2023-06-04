@@ -1,0 +1,54 @@
+<div class="maindiv">
+
+
+
+    <div class="leftside">
+<img src="{{active}}" alt="">
+
+<h4> Destination </h4>
+<div class="placeimgrow" >
+    <div class="column" (click)="clickp(k)" *ngFor="let i of information[id].destinationimg; let k=index">
+        <img [src]="i" alt="">  
+    </div>
+
+</div>
+
+<h4> Hotels </h4>
+<div class="hotelsimgrow">
+    <div (click)="click(j)" class="column" *ngFor="let i of information[id].hotelimg; let j=index ">
+    <img [src]="i" alt="">   
+    <h4 class="label"> {{information[id].hotelNames[j]}} </h4>
+   
+</div>
+</div>
+
+
+</div>    
+
+
+
+<div class="rightside">
+    <div class="head">
+<h3 class="placename">
+    {{information[id].destination}}
+</h3>
+<h4> 
+     {{information[id].place}}
+    </h4>
+</div>
+    <div class="body">
+<p class="aboutplace"> {{information[id].describtion}} </p>
+
+
+<h3>  HOTEL: {{information[id].hotelNames[index]}}</h3>
+<p class="abouthotels">{{information[id].hotelinfo[index]}} </p>
+</div>
+<div class="footer">
+<button> book a ticket </button>
+<div class="raterow"[innerHTML]="ratemas">
+    
+</div>
+</div>
+</div>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="body">
+<form  [formGroup]='ractiveform' (submit)="chack()">
+    <div class="row">
+      <h3>Registration form</h3>
+    </div>
+    <div class="row">
+      <label for="name">სახელი</label>
+      <input type="text" class="text" id="name" name="nam" formControlName="name">
+    </div>
+
+    <div class="row">
+      <label for="surname">გვარი</label>
+      <input type="text" class="text" id="surname" name="sur" formControlName="surname">
+    </div>
+
+    <div class="row">
+      <label for="em">ელ:ფოსტა</label>
+      <input type="email" class="text" id="em" name="email" formControlName="email">
+    </div>
+    <div class="row">
+      <label for="ps"> პაროლი</label>
+      <input type="password" class="password" required minlength="5" id="ps" name="password" formControlName="password">
+    </div>
+    <div class="row">
+      <label for="im"> ფოტოს ლინკი</label>
+      <input type="text"   id="im" name="img" formControlName="img">
+    </div>
+    <div class="row">
+      <label for="select"> აირჩიეთ თქვენი სქესი </label>
+      <select name="gender" id="select" formControlName="gender" >
+        <option value="man">man</option>
+        <option value="women">women</option>
+        <option value="none">none</option>
+      </select>
+    </div>
+    <h3 *ngIf="text"> </h3>
+    <button type="submit" class="btn btn-primary" *ngIf="ractiveform.status=='VALID' "   >Submit</button>
+  </form>
+  </div>

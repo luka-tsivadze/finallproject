@@ -1,0 +1,19 @@
+<div class="body">
+<h1> Destinations </h1>
+<div class="cardboss">
+
+    <div class="card" *ngFor="let card of information">
+        
+        <img src='{{card.destinationimg}}' alt="">
+       <div class="row">
+        <h4>{{card.destination}}</h4>
+   
+
+       </div>
+       <p>{{card.place}}</p>
+       <button routerLink="{{card.id}}">view more</button>
+</div>
+
+
+</div>
+</div>

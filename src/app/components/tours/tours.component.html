@@ -1,0 +1,42 @@
+<div class="seasons" [@fadeIn] *ngIf="season == false">
+    <div class="spring" (click)="clicked($event)"><h1>S p r i n g</h1></div>
+    <div class="summer" (click)="clicked($event)"><h1>S u m m e r</h1></div>
+    <div class="outumn" (click)="clicked($event)"><h1>O u t u m n</h1></div>
+    <div class="winter" (click)="clicked($event)"><h1>W i n t e r</h1></div>
+  </div>
+  <div class="isclicked" *ngIf="cardclicked" (click)="unclick()"> 
+  </div>
+  
+  <div class="addcontent" [@fadeInOut] *ngIf="cardclicked == true" (click)="unclick()">
+    <h3> detailed info</h3>
+    <div class="column">
+      <p *ngFor="let days of detail">{{ days }}</p>
+    </div>
+    
+  </div>
+  
+  <div class="content" *ngIf="season == true" >
+    <button class="back" (click)="back()" ><img src="../../../assets/icons/Vectorarrowright-W.png" alt=""> go back </button>
+    <h3>{{ head }} tours</h3>
+    <div class="tourcard" *ngFor="let card of type">
+      <img [src]="card.img" alt="">
+      <div class="dc">
+        <div class="line1">
+          <h1>{{ card.place }}</h1>
+          <span>price for 1 person: {{ card.price }}$</span>
+        </div>
+  
+        <div class="lin2"   >
+          <h2>tour includes:</h2>
+          <div class="line3">
+            <ul>
+              <li *ngFor="let incl of card.includes">{{ incl }}</li>
+            </ul>
+          </div>
+        </div>
+        <button class="responsive" >tour includes</button>
+        <button (click)="details(card)">click for more</button>
+      </div>
+    </div>
+  </div>
+ 
