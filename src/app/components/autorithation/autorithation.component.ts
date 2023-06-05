@@ -12,7 +12,8 @@ export class AutorithationComponent  implements OnInit {
   title = 'forms2';
   ractiveform:FormGroup
   users=[];
-  link:string
+link
+  registrated=false
 password=false;
 email=false;
   restartWindow: any; 
@@ -26,13 +27,12 @@ email=false;
    gender:new FormControl('none')
   })
   if (localStorage.getItem('isregistred') === 'true') {
-    this.router.navigate(['']); 
+
+this.registrated=JSON.parse(localStorage.getItem('isregistred'));
   }
   }
 
   submit(){
-
-    
   this.http.get('https://finalls-a1c25-default-rtdb.europe-west1.firebasedatabase.app/info.json')
   .pipe(map((res) => {
     const products=[]
@@ -54,7 +54,7 @@ email=false;
  
      this.users = response;
      for( let user of this.users){
-       console.log(user)
+
       if(this.ractiveform.value.email==user.email && this.ractiveform.value.password==user.password){
      
         this.email=false
@@ -62,7 +62,7 @@ email=false;
         console.log('logged')
         localStorage.setItem('userinfo',JSON.stringify(user))
         localStorage.setItem('isregistred', 'true')
-            window.location.reload();
+        this.router.navigate([''])
       }else if(this.ractiveform.value.email==user.email){
         this.email=false
         this.password=true
@@ -81,5 +81,4 @@ email=false;
 
   }
 }
-//responsive
 

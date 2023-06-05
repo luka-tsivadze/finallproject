@@ -16,6 +16,7 @@ this.getuserinfo()
 
 ngOnInit(): void {
      this.isregistr()
+     
 }
 isregistr(){
 

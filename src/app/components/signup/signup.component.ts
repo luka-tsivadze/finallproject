@@ -64,16 +64,16 @@ chack(){
      for( let user of this.users){
       if(this.ractiveform.value.email==user.email ){
         this.text='this email is already used by another user '
-        console.log('email prob')
+     
       break
       }else if( this.ractiveform.value.password==user.password){
         this.text='this password is already used by another user '
-        console.log('password sent')
+    
         break
       }
      }
      if(this.text==null){ 
-      console.log('sent')
+
    
        this.submit()
        this.router.navigate(['../log-in'])
