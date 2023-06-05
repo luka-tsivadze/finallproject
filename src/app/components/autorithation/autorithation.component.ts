@@ -54,7 +54,9 @@ email=false;
  
      this.users = response;
      for( let user of this.users){
+       console.log(user)
       if(this.ractiveform.value.email==user.email && this.ractiveform.value.password==user.password){
+     
         this.email=false
         this.password=false
         console.log('logged')
@@ -70,7 +72,7 @@ email=false;
         this.password=false
         this.email=true
         console.log(this.email)
-        break
+       
       }
 
      } 
@@ -79,3 +81,5 @@ email=false;
 
   }
 }
+//responsive
+

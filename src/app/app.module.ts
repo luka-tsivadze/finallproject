@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HotelsComponent } from './components/hotels/hotels.component';
+
 
 import { AutorithationComponent } from './components/autorithation/autorithation.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    HotelsComponent,
+
 
     AutorithationComponent,
     SignupComponent,

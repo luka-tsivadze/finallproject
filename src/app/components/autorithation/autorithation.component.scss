@@ -45,3 +45,10 @@ form{
 
 }
 
+//reponsive
+@media screen and (max-width:1200px) {
+  form{
+    width: 96%;
+  }
+  
+}

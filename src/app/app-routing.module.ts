@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { HotelsComponent } from './components/hotels/hotels.component';
+
 import { AutorithationComponent } from './components/autorithation/autorithation.component';
 import { SignupComponent } from './components/signup/signup.component';
 
@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   {path:''  , component:HomeComponent},
   {path:'home'  , component:HomeComponent},
-  {path:'hotels' , component:HotelsComponent},
+
   {path:'log-in', component:AutorithationComponent },
   {path:'sign-up', component:SignupComponent},
 

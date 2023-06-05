@@ -294,3 +294,21 @@ img{
 }
 
 }
+@media screen and (max-width:566px) {
+
+    .seasons{
+        gap:15px;
+        width: 80%;
+    }
+    .dc{
+    .line1{
+        font-size: 10px;
+        h1{
+        font-size: 14px;
+        }
+    }
+    .responsive{
+        display:none !important;
+    }
+}
+}
